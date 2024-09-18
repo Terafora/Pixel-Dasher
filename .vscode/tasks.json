@@ -7,8 +7,7 @@
             "command": "g++",
             "args": [
                 "dasher.cpp",
-                "-o",
-                "dasher",
+                "-o", "dasher",
                 "-lraylib",
                 "-lGL",
                 "-lm",
@@ -21,8 +20,14 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": ["$gcc"],
-            "detail": "Generated task for compiling C++ files with g++"
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Generated task for compiling C++ files with g++",
+            "options": {
+                "cwd": "${workspaceFolder}",      // Ensure it runs in your project directory
+                "reveal": "always",               // Force terminal to reveal output
+                "runIn": "terminal"               // Make sure the task runs in an external terminal
+            }
         }
     ]
-}
